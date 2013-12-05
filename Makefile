@@ -4,6 +4,7 @@ slides.pdf: slides.md
 	pandoc -i -s -o slides.tex slides.md -t beamer -V theme=Warsaw --slide-level=2
 	sed -i 's/begin{frame}/begin{frame}[fragile]/g' slides.tex
 	sed -i 's/\\begin{document}/\\usepackage{minted}\\begin{document}/g' slides.tex
+	sed -i 's/\[fragile\]\[fragile\]/[fragile]/g' slides.tex
 	pdflatex -shell-escape slides.tex
 	rm slides.tex
 
