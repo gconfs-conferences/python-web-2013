@@ -1,5 +1,5 @@
 % Python Web Development
-% Antoine Pietri & Paul Hervot
+% Antoine Pietri
 % 2013-12-06
 
 # Introduction
@@ -94,7 +94,7 @@
 
 ## Pyramid example
 
-\tiny{
+\scriptsize{
 \begin{minted}{python}
 
     from wsgiref.simple_server import make_server
@@ -147,11 +147,10 @@
 
 I can't possibly do it justice in one slide, but:
 
-\tiny{
+\scriptsize{
 \begin{minted}{python}
     @login_required
     def add_quote(request):
-        print type(request.user)
         if request.method == 'POST':
             form = AddQuoteForm(request.POST)
             if form.is_valid():
@@ -170,7 +169,7 @@ I can't possibly do it justice in one slide, but:
 ## Others
 
 * web2py
-* -Apache's mod\_python-
+* ~~Apache's mod\_python~~
 * Manually (CGI or WSGI)
 
 # Structure
@@ -270,8 +269,7 @@ directly the generated HTML)
 * Before doing anything, learn how unicode is handled in your version of Python
 * Good lecture: *The Absolute Minimum Every Software Developer Absolutely,
   Positively Must Know About Unicode and Character Sets*
-* **NEVER** solve a Unicode problem by stripping out non-ASCII characters. This
-  is just the beginning of the end.
+* **NEVER** solve a Unicode problem by stripping out non-ASCII characters.
 
 ## XSS
 
@@ -324,6 +322,7 @@ directly the generated HTML)
 
 ## ORM example
 
+\footnotesize
 \begin{minted}{python}
 
 class Quote(models.Model):
@@ -333,7 +332,7 @@ class Quote(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, null=True, blank=True)
     visible = models.BooleanField(default=False)
-    accepted = models.BooleanField(default=False, verbose_name=u'accepté')
+    accepted = models.BooleanField(default=False)
 
 \end{minted}
 
@@ -367,7 +366,6 @@ class Quote(models.Model):
 ## Questions?
 
 * antoine.pietri@epita.fr
-* paul.hervot@epita.fr
 * \#epita @ irc.rezosup.org
 * Slides available soon on http://gconfs.fr/confs
 
