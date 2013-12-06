@@ -217,7 +217,7 @@ directly the generated HTML)
 
 ## Introduction
 
-* You don't want to write the HTML in your code (remember, this ain't PHP)
+* You don't want to write the HTML in your code (remember, this isn't PHP...)
 * A common approach is to use templates
 
 ## Template libraries
@@ -361,3 +361,13 @@ class Quote(models.Model):
 * mod\_wsgi in Apache works well
 * Nginx is great for reverse-proxying
 * Use one of many event-driven workers (Tornado, gunicorn, ...)
+
+# Conclusion
+
+## Questions?
+
+* antoine.pietri@epita.fr
+* paul.hervot@epita.fr
+* \#epita @ irc.rezosup.org
+* Slides available soon on http://gconfs.fr/confs
+
